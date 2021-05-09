@@ -5,3 +5,7 @@
 
 (defn get-quote-by-id [id]
   (first (filter #(= (get % "id") id) quotes-db)))
+
+(comment
+  (get-quote-by-id "13587c8e")
+  )

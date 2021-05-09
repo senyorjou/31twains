@@ -54,8 +54,8 @@
   (auth?
    (context "/quotes" [:as req]
     (GET "/" [] (get-quotes (:user-id req)))
-    (GET "/:id" [quote-id] (get-quote quote-id))
-    (GET "/:id/share" [quote-id] (create-share quote-id))))
+    (GET "/:quote-id" [quote-id] (get-quote quote-id))
+    (GET "/:quote-id/share" [quote-id] (create-share quote-id))))
   (route/not-found "Not Found"))
 
 (def app
